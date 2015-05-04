@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="swiftApp_Watch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="100" height="80" alignment="center" image="0" id="m9j-tQ-4k5"/>
+                        <slider width="1" alignment="left" maximum="6" steps="6" id="3uu-fn-0lQ">
+                            <connections>
+                                <action selector="action:" destination="AgC-eL-Hgc" id="QG1-xH-fDc"/>
+                            </connections>
+                        </slider>
+                        <group width="1" alignment="left" id="cl3-Tm-JaF">
+                            <items>
+                                <label alignment="left" text="Swift" id="Mtc-Eu-rhM"/>
+                                <label alignment="right" text="Watch" id="Gjv-TR-2iq"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="老镇讲堂" id="olW-m7-ZLN">
+                            <connections>
+                                <action selector="goToNextController" destination="AgC-eL-Hgc" id="BLa-sp-TdP"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="imageView" destination="m9j-tQ-4k5" id="OqF-NB-l1g"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="237"/>
+        </scene>
+        <!--nextVC-->
+        <scene sceneID="nPQ-ya-QTj">
+            <objects>
+                <controller identifier="nextVC" id="Hpn-kb-8SO" customClass="InterfaceController2" customModule="swiftApp_Watch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="Xgy-e0-hrt">
+                            <items>
+                                <imageView width="0.47999999999999998" height="80" alignment="left" verticalAlignment="center" image="0" id="Fsa-sr-0xx"/>
+                                <separator alignment="center" verticalAlignment="center" id="93X-Dc-eqC"/>
+                                <label width="0.5" alignment="right" verticalAlignment="center" text="老镇讲堂" id="Ufu-n6-vLL"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="img" destination="Fsa-sr-0xx" id="F5A-Uq-Bm3"/>
+                        <outlet property="lab" destination="Ufu-n6-vLL" id="okN-yL-ZhR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="769" y="232"/>
+        </scene>
+    </scenes>
+</document>
